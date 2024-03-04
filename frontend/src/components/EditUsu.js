@@ -200,42 +200,19 @@ useEffect(()=>{
             />
           </div>
           
-          <div className="mb-3 text-center">
-            <legend className="text-center mb-3">Tipo de cuenta (requerido)</legend>
-            <label className="m-3" for="cuenta_profesor">
-              <input
-                id="cuenta_profesor"
-                type="radio"
-                name="tipo_cuenta"
-                className="inline"                  
-                value={usuario.tcuenta}     
-                onChange={capturarDatos}         
-              />{" "}
-              Profesor
-            </label>
-            <label className="m-3" for="cuenta_admon">
-              <input
-                id="cuenta_admon"
-                type="radio"
-                name="tipo_cuenta"
-                className="inline"                
-                value={usuario.tcuenta}
-                onChange={capturarDatos}
-              />{" "}
-              Administrativo
-            </label>
-            <label className="m-3" htmlFor="cuenta_nadador">
-              <input
-                id="cuenta_nadador"
-                type="radio"
-                name="tipo_cuenta"
-                className="inline"
-                value={usuario.tcuenta}
-                onChange={capturarDatos}
-              />{" "}
-              Nadador
-            </label>
-          </div>
+          <label className="mb-3">
+            {" "}
+            Tipo de Cuenta
+            <select className="text-center m-2" 
+              name="tcuenta"
+              value={usuario.tcuenta}
+              onChange={capturarDatos}>
+              <option value="">(Selecciona uno)</option>
+              <option value="Administrativo">Administrativo</option>
+              <option value="Profesor">Profesor</option>
+              <option value="Nadador">Nadador</option>
+            </select>
+          </label>
 
           <div className="mb-3">
             <label for="edad"></label>
@@ -264,19 +241,21 @@ useEffect(()=>{
             />
           </div>
 
-          <div className="mb-3">
-            <label for="referrer">
-              Nivel de conocimiento
-              <select id="nivelConocimiento" name="nivelConocimiento" className="text-center m-3" >
-                <option value={usuario.nconocimiento} onChange={capturarDatos} >(selecciona uno)</option>
-                <option value={usuario.nconocimiento} onChange={capturarDatos}>Dragon amarillo</option>
-                <option value={usuario.nconocimiento} onChange={capturarDatos}>Dragon naranja</option>
-                <option value={usuario.nconocimiento} onChange={capturarDatos}>Dragon rojo</option>
-                <option value={usuario.nconocimiento} onChange={capturarDatos}>Dragon verde</option>
-                <option value={usuario.nconocimiento} onChange={capturarDatos}>Dragon azul</option>
-              </select>
-            </label>
-          </div>
+          <label className="mb-3">
+            {" "}
+            Nivel de conocimiento
+            <select className="text-center m-2" 
+              name="nconocimiento"
+              value={usuario.nconocimiento}
+              onChange={capturarDatos}>
+              <option value="">(Selecciona uno)</option>
+              <option value="Dragon amarillo">Dragon amarillo</option>
+              <option value="Dragon naranja">Dragon naranja</option>
+              <option value="Dragon rojo">Dragon rojo</option>
+              <option value="Dragon verde">Dragon verde</option>
+              <option value="Dragon azul">Dragon azul</option>
+            </select>
+          </label>
 
           <div className="mb-3">
             <label className="text-center">

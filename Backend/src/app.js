@@ -17,16 +17,21 @@ app.get('/', (req, res) =>{
     res.send('Bienvenido a mi api');
 })
 
+//prueba para creacion de paquetes 
+
+// app.get('/paq', (req, res) =>{
+//     res.send('Bienvenido a mi api');
+// })
+
+// //ruta para paquetes 
+
+// app.use('/paq/api/paquetes', require('./routes/paquetes'))
+
 // Ruta para la creacion en la api
 
 app.use('/api/usuarios', require('./routes/usuario'))
 
 //Rutas
-
-
-
-
-
 
 
 module.exports = app;
